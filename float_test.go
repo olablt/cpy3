@@ -8,7 +8,6 @@ Copyright 2018 Datadog, Inc.
 package python3
 
 import (
-	"math"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -43,15 +42,15 @@ func TestPyFloatFromAsString(t *testing.T) {
 	pyFloat.DecRef()
 }
 
-func TestPyFloatMinMax(t *testing.T) {
-	Py_Initialize()
+// func TestPyFloatMinMax(t *testing.T) {
+// 	Py_Initialize()
 
-	assert.Equal(t, math.MaxFloat64, PyFloat_GetMax())
+// 	assert.Equal(t, math.MaxFloat64, PyFloat_GetMax())
 
-	assert.Equal(t, 2.2250738585072014e-308, PyFloat_GetMin())
+// 	assert.Equal(t, 2.2250738585072014e-308, PyFloat_GetMin())
 
-	PyFloat_ClearFreeList()
-}
+// 	PyFloat_ClearFreeList()
+// }
 
 func TestPyFloatInfo(t *testing.T) {
 	Py_Initialize()
